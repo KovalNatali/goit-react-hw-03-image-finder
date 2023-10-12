@@ -1,7 +1,7 @@
 import { Component } from "react"
 import toast, { Toaster } from 'react-hot-toast';
 import { SearchBar } from "./Searchbar/Searchbar";
-import { Button } from "./Button/Button";
+import {ButtonLoad } from "./ButtonLoad/ButtonLoad";
 import { fetchImage } from "./Api";
 import { ImageGallery } from "./ImageGallery/ImageGallery";
 import { Loader } from "./Loader/Loader";
@@ -93,7 +93,7 @@ export class App extends Component {
           onOpenModal={this.onOpenModal}
         />
      {this.state.page < Math.ceil(this.state.totalHits / 12) ? (
-    <Button onClick = {this.handalLoadMore}/>
+    <ButtonLoad onClick = {this.handalLoadMore}/>
         ) : null}
           {this.state.isModal && (
           <Modal
